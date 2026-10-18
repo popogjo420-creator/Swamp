@@ -1,0 +1,10 @@
+// Cloudflare reads this file when it builds the game from GitHub. You don't need to edit it.
+{
+  "name": "misty-swamp",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  // one lobby object per lobby code
+  "durable_objects": { "bindings": [{ "name": "LOBBY", "class_name": "Lobby" }] },
+  // SQLite-backed Durable Objects are the kind included in Cloudflare's free plan
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Lobby"] }]
+}
