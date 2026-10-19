@@ -3,6 +3,8 @@
   "name": "misty-swamp",
   "main": "worker.js",
   "compatibility_date": "2025-09-01",
+  // extra game files served as-is from the public/ folder (the player-two figure: public/p2/p2.js -> /p2/p2.js)
+  "assets": { "directory": "./public" },
   // one lobby object per lobby code
   "durable_objects": { "bindings": [{ "name": "LOBBY", "class_name": "Lobby" }] },
   // SQLite-backed Durable Objects are the kind included in Cloudflare's free plan
